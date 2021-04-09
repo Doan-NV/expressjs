@@ -1,0 +1,48 @@
+html{
+    scroll-behavior: smooth;
+}
+.frist {
+    background-image: url('../public/images/samsung/sammsung.webp');
+}
+.section1{
+    padding-top: 100px;
+    padding-bottom: 250px;
+}
+.description{
+    padding:0 !important;
+    margin:0 !important;
+}
+.description h5{
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+}
+.contacts{
+    text-decoration-line: underline;
+    padding: 0;
+    margin:0;
+}
+.text-dark:hover{
+    cursor: pointer !important;
+}
+.content-prodcts{
+    padding-top: 140px !important;
+}
+.content-prodcts h1,p{
+    color: black;
+}
+.carousel-inner{
+    border-bottom: 4px solid #333;
+}
+.tv-av-title {
+    position: static;
+    margin-bottom: -120px;
+}
+/* .tv-av-title h1,h5{
+    color: rgb(194, 193, 193);
+} */
+.carousel{
+    z-index: 1;
+}
+.position-relative{
+    z-index: 2;
+}

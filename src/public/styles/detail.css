@@ -1,0 +1,35 @@
+html{
+background-color: white !important;
+
+}
+body{
+    background-color: white !important;
+}
+.detail{
+    padding-top: 25px;
+}
+/* .info{ */
+    /* padding: 4px; */
+/* } */
+/* .sale {
+    
+} */
+.sale-jr{
+    border: 1px solid rgb(172, 171, 171);
+    background-color: rgb(245, 245, 245);
+    padding-left: 10px;
+}
+.sale-jr-2{
+    border: 1px solid rgb(172, 171, 171);
+    border-bottom: 1px dotted  rgb(172, 171, 171);
+}
+.sale-jr-2 ul{
+    padding-left: 12px;
+}
+.sale-jr-3{
+    border: 1px solid rgb(172, 171, 171);
+    border-top: none;
+}
+.sale-jr-3 ul{
+    padding-left: 12px;
+}

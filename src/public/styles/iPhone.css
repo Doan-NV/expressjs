@@ -1,0 +1,97 @@
+.categori{
+    background-color: rgb(85, 84, 84);
+}
+.nav-link{
+    color: white !important;
+    font-size: 13px !important;
+}
+.account {
+    float: right;
+    margin-top: -70px;
+    padding-right: 20px;
+    color: aquamarine;
+}
+.account a{
+    text-decoration: none;
+    color: brown;
+}
+.account a:hover{
+    text-decoration: none;
+    color: brown;
+}
+/* SECTION */
+.content{
+    text-align: center;
+}
+.content h1{
+    font-size: 60px;
+}
+.content h4 a{
+    /* text-decoration: none; */
+    font-weight: 480;
+    color: #06c;
+}
+.click-buy{
+    display: flex;
+    padding: 0;
+    margin:0;
+    border-radius: 20px !important;
+}
+.buy-iphone{
+    background-color: turquoise;
+    font-weight: 700;
+    border-radius: 4px !important;
+}
+.phone{
+    border-right: 1px solid #333;
+}
+.phone-end{
+    border-right: 0px solid #333;
+}
+
+/*watch*/
+.watch-apple{
+    background-color: rgb(223, 221, 221);
+}
+.watch{
+    background-color: black;
+}
+.icon-apple{
+    font-size: 40px;
+}
+.d-content{
+    display: contents;
+    color: white;
+}
+.over-view{
+    padding-top: 150px;
+}
+.over-view h1{
+    font-size: 50px;
+}
+.over-view h1,h4{
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+.over-view h1,h4{
+    color: white;
+}
+
+/* accessories*/
+.accessories h1 {
+    /* color: white; */
+    text-decoration-line: underline;
+}
+.one1{
+    border-bottom: 1px solid #333;
+}
+.access {
+    /* border: 1px solid rgb(148, 147, 147); */
+}
+.image-accessories img{
+    width: 350px;
+    margin-top: 10px;
+}
+/* .accessories{
+    background-color: #333;
+} */

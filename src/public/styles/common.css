@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* body{
+    background-color: #50c1f5 !important;
+} */
+ /* HEADING */
+ .header1 {
+    margin-bottom: 30px;
+}
+.contact-header h4 {
+    font-family: "contact-header";
+    font-weight: 300;
+}
+.logo img{
+    max-width: auto;
+    height: auto;
+    display: flex;
+}
+.contact-header i {
+    font-size: 30px;
+    color: rgba(0,0,0,.5);
+
+}
+.home-image {
+    max-width: 100%;
+    height: auto;
+}

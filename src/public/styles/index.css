@@ -1,0 +1,33 @@
+ 
+
+ /* SECTION */
+ body{
+    /* background-image: linear-gradient(to right, #e1ecf1,#ffffff) !important; */
+    background-color: rgb(0, 0, 0) !important;
+ }
+.content {
+    padding: 100px 0 0 20px;
+}
+.content h1{
+    font-weight: 500;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+.content p{
+    text-align: center;
+    color: thistle;
+}
+.content h4{
+    text-align: center;
+    color: rgb(247, 243, 247);
+}
+.contact-header a{
+    color: #ffffff !important;
+}
+.buttonGoShop {
+    text-align: center;
+    margin-top: 40px;
+
+}
