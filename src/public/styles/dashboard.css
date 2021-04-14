@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    /* font-family: montserrat; */
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.container-fluid {
+    padding: 20px;
+}
+
+.dropdown-item {
+    background-color: #3498db !important;
+}
+
+
+/* .categories {
+    background-image: linear-gradient(120deg, #3498db, #8e44ad);
+} */
+
+.avatar {
+    display: inline-flex;
+}
+
+.avatar img {
+    max-width: 20%;
+    border-radius: 50%;
+}
+
+.infor {
+    margin-left: 12px;
+}
+
+.cate {
+    background-image: linear-gradient(120deg, #3498db, #8e44ad);
+    ;
+}
