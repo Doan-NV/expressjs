@@ -17,7 +17,6 @@ module.exports.postLogin = async(req, res) => {
     console.log('chay vao day')
     let username = req.body.username;
     let password = req.body.password;
-    // console.log(username, password)
     let errors = [];
     let checked = await adminModel.checkingAdmin(username, password);
 
