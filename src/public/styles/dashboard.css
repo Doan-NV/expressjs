@@ -8,6 +8,7 @@
 
 body {
     min-height: 100vh;
+    /* position: absolute; */
 }
 
 .container-fluid {
@@ -37,6 +38,66 @@ body {
 }
 
 .cate {
-    background-image: linear-gradient(120deg, #3498db, #8e44ad);
+    background-image: linear-gradient(120deg, #3498db, #7e7681);
     ;
 }
+
+.main-content {
+    background-color: rgb(199, 199, 199);
+}
+
+.log-out {
+    float: right;
+    margin-top: -45px;
+}
+
+
+/* FOOTER */
+
+
+/* BACK TO TOP BUTTON */
+
+.on_top {
+    opacity: 0.6;
+    display: block;
+}
+
+.on_top:hover {
+    background-color: #007bb6;
+    color: #fff;
+    border: 1px solid #007bb6;
+    opacity: 1;
+}
+
+.on_top i {
+    font-size: 20px;
+}
+
+.on_top {
+    border-radius: 30%;
+    background-color: #e42222;
+    padding: 10px 10px;
+    white-space: nowrap;
+    color: #fff;
+    position: fixed;
+    bottom: 75px;
+    right: 30px;
+    height: 44px;
+}
+
+
+/* khi chưa hiển thị form */
+
+.information {
+    position: absolute;
+    z-index: 1;
+}
+
+
+/* khi hiển thị form */
+
+
+/* .information {
+    position: absolute;
+    opacity: 0.2;
+} */

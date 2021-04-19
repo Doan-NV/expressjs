@@ -5,6 +5,11 @@
     background-color: rgb(45, 43, 43);
 }
 
+.footer {
+    position: absolute;
+    bottom: 10px;
+}
+
 .link-author {
     color: #a2acaf;
     font-size: 13px;
@@ -57,6 +62,7 @@
 
 
 /* BACK TO TOP BUTTON */
+
 
 /* .on_top {
     opacity: 0.6;
