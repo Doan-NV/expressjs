@@ -12,7 +12,7 @@ body {
 }
 
 .container-fluid {
-    padding: 20px;
+    padding: 10px 20px 10px 20px;
 }
 
 .dropdown-item {
@@ -89,7 +89,6 @@ body {
 /* khi chưa hiển thị form */
 
 .information {
-    position: absolute;
     z-index: 1;
 }
 
@@ -98,6 +97,5 @@ body {
 
 
 /* .information {
-    position: absolute;
     opacity: 0.2;
 } */
