@@ -1,4 +1,3 @@
-const e = require('express');
 const db = require('../config/db/connection');
 class Admin {
 
@@ -11,29 +10,30 @@ class Admin {
         }
         // Checking login
     async checkingAdmin(username, password) {
-            let checked;
-            let sql = `SELECT * FROM admin WHERE username = '${username}' AND password = '${password}'`;
+        let checked;
+        let sql = `SELECT * FROM admin WHERE username = '${username}' AND password = '${password}'`;
 
-            let data = new Promise((res, rej) => {
-                db.query(sql, (err, result) => {
-                    res(result);
-                })
-            });
-            await data.then(result => {
-                if (result.length != 1) {
-                    checked = 0;
-                } else {
-                    checked = 1;
-                }
-                return checked;
-
-            }).catch(err => {
-                console.log('no-data' + err)
-            });
-
+        let data = new Promise((res, rej) => {
+            db.query(sql, (err, result) => {
+                res(result);
+            })
+        });
+        await data.then(result => {
+            if (result.length != 1) {
+                checked = 0;
+            } else {
+                checked = 1;
+            }
             return checked;
-        }
-        // Create new admin
+
+        }).catch(err => {
+            console.log('no-data' + err)
+        });
+
+        return checked;
+    }
+
+    // Create new admin
     insertNewAdmin(id, username, password, name) {
         let sql = `INSERT INTO admin (id,username, password, name) VALUES ('${id}','${username}', '${password}','${name}')`;
         db.query(sql, (err, result) => {
