@@ -1,1 +1,130 @@
-h1 doanne
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title Document
+  link(rel='stylesheet',type="text/css" href='/styles/dashboard.css')
+  link(rel='stylesheet',type="text/css" href='/styles/detailUser.css')
+  link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.7.0/css/all.css', crossorigin='anonymous')
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+.container-fluid
+  .row
+    .col-sm-3.cate
+      .categories
+        .admin
+          .avatar
+            img(src='/images/common/107901144_304373817420037_5210403417239929865_o.jpg', alt='')
+            .infor
+              h5 Administartor
+              h6 Name: Nguyen Van Doan
+        .navbar-categories
+          .navbar-content.d-block
+            nav.navbar.navbar-expand-lg.navbar-light
+              button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+              #navbarNavDropdown.collapse.navbar-collapse
+                ul.navbar-nav.d-block
+                  li.nav-item.active.pt-4
+                    a.nav-link.btn.btn-primary(href='#') Qu&#x1EA3;n l&iacute; &dstrok;&#x1A1;n h&agrave;ng
+                  li.nav-item.active.pt-4
+                    a.nav-link.btn.btn-primary(href='#') Qu&#x1EA3;n l&iacute; Kh&aacute;ch h&agrave;ng
+                  li.nav-item.active.pt-4
+                    a.nav-link.btn.btn-primary(href='#') Qu&#x1EA3;n l&iacute; b&agrave;i vi&#x1EBF;t
+                  li.nav-item.dropdown.active.pt-4
+                    a#navbarDropdownMenuLink.nav-link.btn.btn-primary.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')  Danh m&#x1EE5;c s&#x1EA3;n ph&#x1EA9;m 
+                    .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                      a.dropdown-item(href='#') Iphone
+                      a.dropdown-item(href='#') Sam Sung
+                      a.dropdown-item(href='#') Something else here
+    .col-sm-8.main-content
+      .information
+        .title.pt-3.pl-5
+          h4 Quản lí Khách Hàng
+        .log-out
+          button.btn.btn-primary &Dstrok;&abreve;ng xu&#x1EA5;t
+        .content
+          table.table.table-striped.table-sm
+            thead
+              tr
+                th(scope='col') STT
+                th(scope='col') Họ và tên
+                th(scope='col') Email
+                th(scope='col') Số điện thoại
+                th(scope='col') Địa chỉ
+                th(scope='col') Hoạt động
+            tbody
+              each users in listUser 
+                tr
+                  th= users.id
+                  td= users.name
+                  td= users.email
+                  td= users.phone
+                  td= users.address
+                  td
+                    button.btn.btn-outline-info(type='button') Info
+                    button.btn.btn-outline-danger(type='button') X&oacute;a
+
+      .info-details
+        form(action='')
+          .user-details
+            .input-box
+              span.details T&ecirc;n &dstrok;&#x1EA7;y &dstrok;&#x1EE7;
+              input(type='text', placeholder='Enter Your Name', required='')
+            .input-box
+              span.details Qu&ecirc; Qu&aacute;n
+              input(type='text', placeholder='Enter Your Name', required='')
+            .input-box
+              span.details T&ecirc;n t&agrave;i Kho&#x1EA3;n
+              input(type='text', placeholder='Enter Your Name', required='')
+            .input-box
+              span.details S&#x1ED1; &dstrok;i&#x1EC7;n Tho&#x1EA1;i
+              input(type='text', placeholder='Enter Your Name', required='')
+            .input-box
+              span.details Email
+              input(type='text', placeholder='Enter Your Name', required='')
+            .input-box
+              span.details Gi&#x1EDB;i t&iacute;nh
+              input(type='text', placeholder='Enter Your Name', required='')
+          input.logbtn(type='submit', value='Save')
+footer.container.footer
+  nav(aria-label='Page navigation example')
+    if pages > 0
+      ul.pagination.justify-content-center(style='margin-left:10px')
+        if current == 1
+          li.page-item.disabled
+            a.page-link Next
+        else
+          li.page-item
+            a.page-link(href='/admin/dashboard/1', aria-label='Previous')
+              span(aria-hidden='true') &laquo;
+              span.sr-only Previous
+        -
+          var i = Number(current) > 3 ? Number(current) - 2 : 1
+        if i != 1
+          li.page-item.disabled
+            a.page-link ...
+        - for (; i <= (Number(current) + 2) && i <= pages ; i++)
+            if i == current
+              li.active.page-item
+                a.page-link=i
+            else 
+              li.page-item
+                a.page-link(href='/admin/dashboard/' + i)=i
+            if i == Number(current) + 2 && i < pages
+              li.page-item.disabled
+                a.page-link ...
+        if current == pages
+          li.page-item.disabled
+            a.page-link Last 
+        else 
+          li.page-item 
+            a.page-link(href="/admin/dashboard/" + pages, aria-label='Next') 
+              span(aria-hidden='true') &raquo;
+              span.sr-only Next 
+.container
+a.on_top(href='#')
+  i.fa-arrow-circle-up.fa
+script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', crossorigin='anonymous')
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')
