@@ -42,7 +42,7 @@ head
         .title.pt-3.pl-5
           h4 Quản lí Khách Hàng
         .log-out
-          button.btn.btn-primary &Dstrok;&abreve;ng xu&#x1EA5;t
+          a.btn.btn-primary(href='/admin/logout') Đăng Xuất
         .content
           table.table.table-striped.table-sm
             thead
@@ -62,31 +62,31 @@ head
                   td= users.phone
                   td= users.address
                   td
-                    button.btn.btn-outline-info(type='button') Info
-                    button.btn.btn-outline-danger(type='button') X&oacute;a
+                    button.btn.btn-outline-info(type='button', id=users.id) Info
+                    button.btn.btn-outline-danger(type='button', id=users.id) Xóa
 
       .info-details
         form(action='')
           .user-details
             .input-box
               span.details T&ecirc;n &dstrok;&#x1EA7;y &dstrok;&#x1EE7;
-              input(type='text', placeholder='Enter Your Name', required='')
+              input#inputName(type='text' placeholder='Enter Your Name', value='')
             .input-box
               span.details Qu&ecirc; Qu&aacute;n
-              input(type='text', placeholder='Enter Your Name', required='')
+              input(type='text',name='email' placeholder='Enter Your Name')
             .input-box
               span.details T&ecirc;n t&agrave;i Kho&#x1EA3;n
-              input(type='text', placeholder='Enter Your Name', required='')
+              input(type='text',name='phone' placeholder='Enter Your Name')
             .input-box
               span.details S&#x1ED1; &dstrok;i&#x1EC7;n Tho&#x1EA1;i
-              input(type='text', placeholder='Enter Your Name', required='')
+              input(type='text',name='address' placeholder='Enter Your Name')
             .input-box
               span.details Email
-              input(type='text', placeholder='Enter Your Name', required='')
+              input(type='text',name='' placeholder='Enter Your Name')
             .input-box
               span.details Gi&#x1EDB;i t&iacute;nh
-              input(type='text', placeholder='Enter Your Name', required='')
-          input.logbtn(type='submit', value='Save')
+              input(type='text',name='' placeholder='Enter Your Name')
+          input.logbtn(type='button', value='Save')
 footer.container.footer
   nav(aria-label='Page navigation example')
     if pages > 0
@@ -125,6 +125,7 @@ footer.container.footer
 .container
 a.on_top(href='#')
   i.fa-arrow-circle-up.fa
-script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', crossorigin='anonymous')
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+script(src='../../jquery/dashboard.js',type="text/javascript")
 script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', crossorigin='anonymous')
 script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')

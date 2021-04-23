@@ -15,6 +15,22 @@ class User {
             console.log('1 record inserted')
         });
     }
+    async selectUser(id) {
+        let sql = `SELECT * FROM user WHERE id = "${id}"`;
+        let data = new Promise((res, rej) => {
+            db.query(sql, (err, result) => {
+                res(result);
+            });
+        });
+        let user;
+        await data.then(result => {
+            user = result;
+        }).catch(err => {
+            console.log('no-data' + err)
+        });
+        console.log(user)
+        return user;
+    }
     async selectLimitUser(offset) {
         let sql = `SELECT * FROM user LIMIT 10 OFFSET ${10*offset}`;
         let data = new Promise((res, rej) => {
@@ -28,7 +44,6 @@ class User {
         }).catch(err => {
             console.log('no-data' + err)
         });
-        // console.log(listUser);
         // trả về danh sách 10 người mỗi lần query
         return listUser;
     }

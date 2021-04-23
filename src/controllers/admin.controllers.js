@@ -41,12 +41,30 @@ module.exports.postLogin = async(req, res) => {
         res.redirect('dashboard');
     }
 };
-
-// [GET] dashboard 
+// [GET] logout
+module.exports.logout = (req, res) => {
+        // req.session.destroy(function(err){
+        //     if(err){
+        //        console.log(err);
+        //     }else{
+        //         console.log(session.email);
+        //         req.end();
+        //         res.redirect('/signup');
+        //     }
+        //  });
+        res.clearCookie("username");
+        res.redirect('/admin/login');
+    }
+    // [GET] dashboard 
 module.exports.dashboard = async(req, res) => {
     let page = req.params.page || 0;
     // mặc định được limit ở 10 records
     let listUser = await userModel.selectLimitUser(page);
     let count = await userModel.selectCount();
-    res.render('admin/dashboard', { name: req.cookies.username, listUser: listUser, current: page, pages: (count[0].count / 10 - 1) });
+    res.render('admin/dashboard', {
+        name: req.cookies.username, // tên admin
+        listUser: listUser, // danh sách user
+        current: page, // trang hiện tại
+        pages: (count[0].count / 10 - 1) // tổng số trang
+    });
 }

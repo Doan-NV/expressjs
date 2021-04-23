@@ -10,6 +10,7 @@ router.post('/login', adminController.postLogin);
 
 router.get('/dashboard/', requireAuth.dashboard, adminController.dashboard);
 router.get('/dashboard/:page', requireAuth.dashboard, adminController.dashboard);
+router.get('/logout', adminController.logout);
 
 // router.get('/dashboard', requireAuth.requireAuth, adminController.dashboard);
 
